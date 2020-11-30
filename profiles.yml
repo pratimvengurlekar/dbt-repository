@@ -1,0 +1,19 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: vr99036.west-europe.azure
+      user: dbtmanager
+      role: ACCOUNTADMIN
+
+      # Keypair config
+      private_key_path: C:/Users/ltiprvg/Documents/DbtRun/rsa_key.pem
+      #private_key_passphrase: [passphrase for the private key, if key is encrypted]
+
+      database: DEMO_DB
+      warehouse: COMPUTE_WH
+      schema: PUBLIC
+      threads: 10
+      client_session_keep_alive: False
+      query_tag: automate
